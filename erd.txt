@@ -1,0 +1,39 @@
+
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+
+Table patient {
+  환자_번호 integer [primary key]
+  이름 varchar
+  나이 varchar
+  발병시간 timestamp
+}
+
+Table vital {
+  환자_번호 integer
+  혈압 integer
+  최고혈압 integer
+  최저혈압 integer
+  호흡 integer
+  산소포화도 integer
+  체온 integer
+}
+
+Table Hospital {
+  hospial_num integer [primary key]
+  위도 float
+  경도 float
+}
+
+Table ER_info{
+  hospital_num integer
+  병상가용률 float
+  진료가능과목 varchar
+}
+
+
+
+Ref: "patient"."환자_번호" < "vital"."환자_번호"
+
+Ref: "Hospital"."hospial_num" < "ER_info"."hospital_num"

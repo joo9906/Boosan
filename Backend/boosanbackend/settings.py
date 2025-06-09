@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',  # GIS 지원을 위한 앱
+    'patient',
+    'hospital',
+    'ambulance',
 ]
 
 MIDDLEWARE = [
