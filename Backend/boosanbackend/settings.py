@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account',
-    'guardian',
-    'meal_card',
-    'support',
+    'health_management',
+    'medical',
+    'seniorjob',
+    'welfare',
 ]
 
 MIDDLEWARE = [
