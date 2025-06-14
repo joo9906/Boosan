@@ -1,5 +1,5 @@
 from django.db import models
-from account.models import User
+from boosanbackend.account.models import User
 
 class MedicalFacility(models.Model):
     name = models.CharField(max_length=100)

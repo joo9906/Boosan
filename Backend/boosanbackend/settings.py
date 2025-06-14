@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'health_management',
     'medical',
     'seniorjob',
-    'welfare',
 ]
 
 MIDDLEWARE = [
