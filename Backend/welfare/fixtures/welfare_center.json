@@ -1,0 +1,626 @@
+[
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 1,
+    "fields": {
+      "name": "(부산)남구종합사회복지관",
+      "address": "부산광역시 남구 동제당로 258",
+      "tel": "0516473655",
+      "type": "사회복지법인",
+      "latitude": 23.307263903672567,
+      "longitude": 120.50160787390902
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 2,
+    "fields": {
+      "name": "(부산)서구종합사회복지관",
+      "address": "부산광역시 서구 망양로193번길 104",
+      "tel": "0512531922",
+      "type": "사회복지법인",
+      "latitude": 23.267016987153717,
+      "longitude": 120.48529460947103
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 3,
+    "fields": {
+      "name": "(부산)중구종합사회복지관",
+      "address": "부산광역시 중구 망양로 309",
+      "tel": "0514643137",
+      "type": "사회복지법인",
+      "latitude": 23.26879475764104,
+      "longitude": 120.47949687434642
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 4,
+    "fields": {
+      "name": "감만종합사회복지관",
+      "address": "부산광역시 남구 우암로84-1",
+      "tel": "0516343415",
+      "type": "사회복지법인",
+      "latitude": 23.31280131425703,
+      "longitude": 120.49171202427912
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 5,
+    "fields": {
+      "name": "강서구종합사회복지관",
+      "address": "부산광역시 강서구 대저로 63번길31(대저동)",
+      "tel": "0519724591",
+      "type": "사회복지법인",
+      "latitude": 23.21557969920857,
+      "longitude": 120.60069704871667
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 6,
+    "fields": {
+      "name": "개금종합사회복지관",
+      "address": "부산광역시 부산진구 백양관문로77번길 140",
+      "tel": "0518935034",
+      "type": "사단법인",
+      "latitude": 23.26589807243433,
+      "longitude": 120.54124570595665
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 7,
+    "fields": {
+      "name": "공창종합사회복지관",
+      "address": "부산광역시 북구 효열로 268",
+      "tel": "0513632063",
+      "type": "사회복지법인",
+      "latitude": 23.265816062745664,
+      "longitude": 120.65459692189768
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 8,
+    "fields": {
+      "name": "금곡종합사회복지관",
+      "address": "부산광역시 북구 효열로 144",
+      "tel": "0513652211",
+      "type": "사회복지법인(직영)",
+      "latitude": 23.262643393343588,
+      "longitude": 120.64471692388796
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 9,
+    "fields": {
+      "name": "금정구종합사회복지관",
+      "address": "부산광역시 금정구 반송로 490번길 47(금사회동동)",
+      "tel": "0515320115",
+      "type": "사회복지법인",
+      "latitude": 23.345507365411216,
+      "longitude": 120.59412110715438
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 10,
+    "fields": {
+      "name": "기장종합사회복지관",
+      "address": "부산광역시 기장군 기장읍 차성로 206",
+      "tel": "0517924730",
+      "type": "공단(직영)",
+      "latitude": 23.4239094318778,
+      "longitude": 120.6153660960553
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 11,
+    "fields": {
+      "name": "낙동종합사회복지관",
+      "address": "부산광역시 강서구 순아강변길 5",
+      "tel": "0512710560",
+      "type": "사회복지법인",
+      "latitude": 23.166537637276345,
+      "longitude": 120.49765411805733
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 12,
+    "fields": {
+      "name": "남광종합사회복지관",
+      "address": "부산광역시 금정구 중앙대로 2349번길 3",
+      "tel": "0515081998",
+      "type": "사회복지법인(직영)",
+      "latitude": 23.331761226976834,
+      "longitude": 120.68145765152616
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 13,
+    "fields": {
+      "name": "남산정종합사회복지관",
+      "address": "부산광역시 북구 만덕대로 155번길 86-9",
+      "tel": "0513428206",
+      "type": "사회복지법인",
+      "latitude": 23.265494978904233,
+      "longitude": 120.599938836399
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 14,
+    "fields": {
+      "name": "다대종합사회복지관",
+      "address": "부산광역시 사하구 다대로 440",
+      "tel": "0512645420",
+      "type": "사회복지법인",
+      "latitude": 23.227530381023566,
+      "longitude": 120.43535462425491
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 15,
+    "fields": {
+      "name": "다행복한종합사회복지관",
+      "address": "부산광역시 기장군 기장읍 차성로 417번길 11",
+      "tel": "0517924990",
+      "type": "공단(직영)",
+      "latitude": 23.42566152280312,
+      "longitude": 120.63613707284141
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 16,
+    "fields": {
+      "name": "당감종합사회복지관",
+      "address": "부산광역시 부산진구 당감서로16",
+      "tel": "0518962320",
+      "type": "사회복지법인",
+      "latitude": 23.2772208829804,
+      "longitude": 120.54019479706061
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 17,
+    "fields": {
+      "name": "덕천종합사회복지관",
+      "address": "부산광역시 북구 덕천로 74",
+      "tel": "0513314674",
+      "type": "사회복지법인",
+      "latitude": 23.26139364793034,
+      "longitude": 120.59081815441566
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 18,
+    "fields": {
+      "name": "동구종합사회복지관",
+      "address": "부산광역시 동구 안창로 57",
+      "tel": "0516333367",
+      "type": "재단법인",
+      "latitude": 23.281629454491075,
+      "longitude": 120.52208156706924
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 19,
+    "fields": {
+      "name": "동래종합사회복지관",
+      "address": "부산광역시 동래구 시실로107번길 151",
+      "tel": "0515312460",
+      "type": "사회복지법인",
+      "latitude": 23.329099529762257,
+      "longitude": 120.59136488164224
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 20,
+    "fields": {
+      "name": "동삼종합사회복지관",
+      "address": "부산광역시 영도구 상리로 30",
+      "tel": "0514052133",
+      "type": "사회복지법인",
+      "latitude": 23.300479309840988,
+      "longitude": 120.45425600090974
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 21,
+    "fields": {
+      "name": "동원종합사회복지관",
+      "address": "부산광역시 북구 금곡대로 616번길 10-9",
+      "tel": "0513610045",
+      "type": "재단법인",
+      "latitude": 23.262401360794488,
+      "longitude": 120.64679108615368
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 22,
+    "fields": {
+      "name": "두송종합사회복지관",
+      "address": "부산광역시 사하구 다송로59",
+      "tel": "0512659471",
+      "type": "사회복지법인",
+      "latitude": 23.232650071201444,
+      "longitude": 120.43330610041035
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 23,
+    "fields": {
+      "name": "만덕종합사회복지관",
+      "address": "부산광역시 북구 함박봉로 140번길 102",
+      "tel": "0513328004",
+      "type": "사회복지법인",
+      "latitude": 23.27738433740853,
+      "longitude": 120.58288241040184
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 24,
+    "fields": {
+      "name": "모라종합사회복지관",
+      "address": "부산광역시 사상구 모라로110번길 129",
+      "tel": "0513049876",
+      "type": "사회복지법인",
+      "latitude": 23.24403023381921,
+      "longitude": 120.56405163945237
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 25,
+    "fields": {
+      "name": "몰운대종합사회복지관",
+      "address": "부산광역시 사하구 다대낙조2길 17 몰운대종합사회복지관",
+      "tel": "0512649033",
+      "type": "사회복지법인",
+      "latitude": 23.214241560939044,
+      "longitude": 120.42218370153009
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 26,
+    "fields": {
+      "name": "반석종합사회복지관",
+      "address": "부산광역시 해운대구 신반송로 159",
+      "tel": "0515420196",
+      "type": "사회복지법인",
+      "latitude": 23.382406278494223,
+      "longitude": 120.60942174633793
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 27,
+    "fields": {
+      "name": "반송종합사회복지관",
+      "address": "부산광역시 해운대구 아랫반송로1번길15",
+      "tel": "0515448006",
+      "type": "재단법인",
+      "latitude": 23.369120261467298,
+      "longitude": 120.60665191378851
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 28,
+    "fields": {
+      "name": "반여종합사회복지관",
+      "address": "부산광역시 해운대구 재반로226번길 13-73",
+      "tel": "0517840554",
+      "type": "재단법인",
+      "latitude": 23.35614487980193,
+      "longitude": 120.57668828844625
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 29,
+    "fields": {
+      "name": "백양종합사회복지관",
+      "address": "부산광역시 사상구 모라로192번길 20-33",
+      "tel": "0513054286",
+      "type": "사회복지법인",
+      "latitude": 23.24791346070775,
+      "longitude": 120.56390574203064
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 30,
+    "fields": {
+      "name": "부산광역시사직종합사회복지관",
+      "address": "부산광역시 동래구 사직북로63번길 20-7",
+      "tel": "0515065757",
+      "type": "학교법인",
+      "latitude": 23.295144721981547,
+      "longitude": 120.57939851703671
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 31,
+    "fields": {
+      "name": "부산기독교종합사회복지관",
+      "address": "부산광역시 서구 까치고개로 229번길 40",
+      "tel": "0512579404",
+      "type": "사회복지법인(직영)",
+      "latitude": 23.262848141411585,
+      "longitude": 120.47491309652332
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 32,
+    "fields": {
+      "name": "부산종합사회복지관(로사)",
+      "address": "부산광역시 수영구 금련로 43번길 54",
+      "tel": "0517553367",
+      "type": "사회복지법인(직영)",
+      "latitude": 23.328127965427424,
+      "longitude": 120.54798727617661
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 33,
+    "fields": {
+      "name": "부산종합사회복지관(어린이재단)",
+      "address": "부산광역시 동구 수정공원로 15",
+      "tel": "0514650990",
+      "type": "사회복지법인",
+      "latitude": 23.279367737999547,
+      "longitude": 120.50376969751079
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 34,
+    "fields": {
+      "name": "부산진구종합사회복지관",
+      "address": "부산광역시 부산진구 복지로 117-12",
+      "tel": "0518930035",
+      "type": "사단법인",
+      "latitude": 23.262645853760198,
+      "longitude": 120.51944073000512
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 35,
+    "fields": {
+      "name": "사상구종합사회복지관",
+      "address": "부산광역시 사상구 백양대로 527(주례동)",
+      "tel": "0513148948",
+      "type": "재단법인",
+      "latitude": 23.242782678939598,
+      "longitude": 120.53384117516958
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 36,
+    "fields": {
+      "name": "사하구종합사회복지관",
+      "address": "부산광역시 사하구 감내2로 21",
+      "tel": "0512932688",
+      "type": "사회복지법인",
+      "latitude": 23.251253161732283,
+      "longitude": 120.46743553209899
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 37,
+    "fields": {
+      "name": "상리종합사회복지관",
+      "address": "부산광역시 영도구 상리로63-16(동삼동)",
+      "tel": "0514045061",
+      "type": "사회복지법인",
+      "latitude": 23.30100175294528,
+      "longitude": 120.45721585145347
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 38,
+    "fields": {
+      "name": "연제구거제종합사회복지관",
+      "address": "부산광역시 연제구 아시아드대로46번길 45",
+      "tel": "0515078171",
+      "type": "학교법인",
+      "latitude": 23.305842567904854,
+      "longitude": 120.56733745479202
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 39,
+    "fields": {
+      "name": "연제구연산종합사회복지관",
+      "address": "부산광역시 연제구 봉수로 17",
+      "tel": "0518638360",
+      "type": "사회복지법인",
+      "latitude": 23.320268380553422,
+      "longitude": 120.5502751098439
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 40,
+    "fields": {
+      "name": "영도구종합사회복지관",
+      "address": "부산광역시 영도구 산정길 138",
+      "tel": "0514134661",
+      "type": "학교법인",
+      "latitude": 23.283964748806344,
+      "longitude": 120.4524322927348
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 41,
+    "fields": {
+      "name": "영진종합사회복지관",
+      "address": "부산광역시 해운대구 반여로 165",
+      "tel": "0515290005",
+      "type": "사회복지법인(직영)",
+      "latitude": 23.351729952607972,
+      "longitude": 120.58489392743307
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 42,
+    "fields": {
+      "name": "와치종합사회복지관",
+      "address": "부산광역시 영도구 함지로 79번길 76",
+      "tel": "0514034200",
+      "type": "사회복지법인",
+      "latitude": 23.298038170880563,
+      "longitude": 120.44551510938402
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 43,
+    "fields": {
+      "name": "용호종합사회복지관",
+      "address": "부산광역시 남구 이기대공원로 7(용호동)",
+      "tel": "0516286737",
+      "type": "사회복지법인",
+      "latitude": 23.338995498684454,
+      "longitude": 120.49761923703902
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 44,
+    "fields": {
+      "name": "운봉종합사회복지관",
+      "address": "부산광역시 해운대구 신반송로 200",
+      "tel": "0515432431",
+      "type": "사회복지법인",
+      "latitude": 23.3791345855473,
+      "longitude": 120.61291639382453
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 45,
+    "fields": {
+      "name": "장선종합사회복지관",
+      "address": "부산광역시 북구 시랑로 114번길 45(구포동)",
+      "tel": "0513367007",
+      "type": "사회복지법인",
+      "latitude": 23.25515859555396,
+      "longitude": 120.57536193218837
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 46,
+    "fields": {
+      "name": "전포종합사회복지관",
+      "address": "부산광역시 부산진구 전포대로 190번길 35",
+      "tel": "0518026383",
+      "type": "사회복지법인",
+      "latitude": 23.302383344343106,
+      "longitude": 120.53016550302272
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 47,
+    "fields": {
+      "name": "절영종합사회복지관",
+      "address": "부산광역시 영도구 함지로 33-10 (동삼동)",
+      "tel": "0514045530",
+      "type": "사회복지법인",
+      "latitude": 23.29594278175223,
+      "longitude": 120.44232915439393
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 48,
+    "fields": {
+      "name": "파랑새종합사회복지관",
+      "address": "부산광역시 해운대구 신반송로 21",
+      "tel": "0515450115",
+      "type": "사회복지법인(직영)",
+      "latitude": 23.378658966497753,
+      "longitude": 120.60909300098565
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 49,
+    "fields": {
+      "name": "해운대종합사회복지관",
+      "address": "부산광역시 해운대구 재반로 12번길16",
+      "tel": "0517825005",
+      "type": "사회복지법인(직영)",
+      "latitude": 23.35230520891435,
+      "longitude": 120.55693159221053
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 50,
+    "fields": {
+      "name": "홀트수영종합사회복지관",
+      "address": "부산광역시 수영구 장대골로 20-5",
+      "tel": "0517603600",
+      "type": "사회복지법인(직영)",
+      "latitude": 23.338012118092763,
+      "longitude": 120.53518682085898
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 51,
+    "fields": {
+      "name": "화명종합사회복지관",
+      "address": "부산광역시 북구 금곡대로 199번길 21",
+      "tel": "0513382233",
+      "type": "사회복지법인",
+      "latitude": 23.2570881416857,
+      "longitude": 120.61039105196092
+    }
+  },
+  {
+    "model": "welfare.welfarecenter",
+    "pk": 52,
+    "fields": {
+      "name": "화정종합사회복지관",
+      "address": "부산광역시 북구 효열로 76",
+      "tel": "0513620111",
+      "type": "사회복지법인",
+      "latitude": 23.26195334506675,
+      "longitude": 120.63808987903924
+    }
+  }
+]

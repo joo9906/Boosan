@@ -1,0 +1,232 @@
+[
+  {
+    "model": "account.user",
+    "pk": 1,
+    "fields": {
+      "username": "elder1",
+      "password": "pbkdf2_sha256$260000$dummy$hash1",
+      "birth_date": "1950-05-01",
+      "gender": "M",
+      "phone_number": "01012345678",
+      "address": "부산광역시 해운대구",
+      "is_guardian": false,
+      "guardian_for": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "email": "elder1@example.com"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 2,
+    "fields": {
+      "username": "elder2",
+      "password": "pbkdf2_sha256$260000$dummy$hash2",
+      "birth_date": "1945-08-15",
+      "gender": "F",
+      "phone_number": "01023456789",
+      "address": "부산광역시 수영구",
+      "is_guardian": false,
+      "guardian_for": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "email": "elder2@example.com"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 3,
+    "fields": {
+      "username": "elder3",
+      "password": "pbkdf2_sha256$260000$dummy$hash3",
+      "birth_date": "1940-10-10",
+      "gender": "M",
+      "phone_number": "01034567890",
+      "address": "부산광역시 남구",
+      "is_guardian": false,
+      "guardian_for": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "email": "elder3@example.com"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 4,
+    "fields": {
+      "username": "elder4",
+      "password": "pbkdf2_sha256$260000$dummy$hash4",
+      "birth_date": "1938-02-20",
+      "gender": "F",
+      "phone_number": "01045678901",
+      "address": "부산광역시 동래구",
+      "is_guardian": false,
+      "guardian_for": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "email": "elder4@example.com"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 5,
+    "fields": {
+      "username": "elder5",
+      "password": "pbkdf2_sha256$260000$dummy$hash5",
+      "birth_date": "1947-12-25",
+      "gender": "M",
+      "phone_number": "01056789012",
+      "address": "부산광역시 연제구",
+      "is_guardian": false,
+      "guardian_for": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "email": "elder5@example.com"
+    }
+  },
+  {
+    "model": "account.welfareeligibility",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "is_low_income": true,
+      "is_disable": true
+    }
+  },
+  {
+    "model": "account.welfareeligibility",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "is_low_income": false,
+      "is_disable": false
+    }
+  },
+  {
+    "model": "account.welfareeligibility",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "is_low_income": true,
+      "is_disable": false
+    }
+  },
+  {
+    "model": "account.welfareeligibility",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "is_low_income": false,
+      "is_disable": true
+    }
+  },
+  {
+    "model": "account.welfareeligibility",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "is_low_income": true,
+      "is_disable": false
+    }
+  },
+  {
+    "model": "account.userdetail",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "income_level": 1,
+      "mobility": "보행기 사용",
+      "digital_literacy": "낮음",
+      "communication_style": "대화형",
+      "living_situation": "자택 거주",
+      "religion": "불교",
+      "preferred_activity_time": "오전",
+      "social_preference": "활동적",
+      "hobby": "독서, 바둑",
+      "disposition": "온화함",
+      "personality": "외향적",
+      "age_group": "70대"
+    }
+  },
+  {
+    "model": "account.userdetail",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "income_level": 2,
+      "mobility": "자유롭게 이동",
+      "digital_literacy": "보통",
+      "communication_style": "대화형",
+      "living_situation": "자택 거주",
+      "religion": "기독교",
+      "preferred_activity_time": "오전",
+      "social_preference": "활동적",
+      "hobby": "독서, 바둑",
+      "disposition": "온화함",
+      "personality": "외향적",
+      "age_group": "70대"
+    }
+  },
+  {
+    "model": "account.userdetail",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "income_level": 3,
+      "mobility": "보행기 사용",
+      "digital_literacy": "낮음",
+      "communication_style": "대화형",
+      "living_situation": "자택 거주",
+      "religion": "불교",
+      "preferred_activity_time": "오전",
+      "social_preference": "활동적",
+      "hobby": "독서, 바둑",
+      "disposition": "온화함",
+      "personality": "외향적",
+      "age_group": "70대"
+    }
+  },
+  {
+    "model": "account.userdetail",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "income_level": 4,
+      "mobility": "자유롭게 이동",
+      "digital_literacy": "보통",
+      "communication_style": "대화형",
+      "living_situation": "자택 거주",
+      "religion": "기독교",
+      "preferred_activity_time": "오전",
+      "social_preference": "활동적",
+      "hobby": "독서, 바둑",
+      "disposition": "온화함",
+      "personality": "외향적",
+      "age_group": "70대"
+    }
+  },
+  {
+    "model": "account.userdetail",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "income_level": 5,
+      "mobility": "보행기 사용",
+      "digital_literacy": "낮음",
+      "communication_style": "대화형",
+      "living_situation": "자택 거주",
+      "religion": "불교",
+      "preferred_activity_time": "오전",
+      "social_preference": "활동적",
+      "hobby": "독서, 바둑",
+      "disposition": "온화함",
+      "personality": "외향적",
+      "age_group": "70대"
+    }
+  }
+]

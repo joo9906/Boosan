@@ -1,85 +1,108 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div id="app">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <router-link to="/" class="brand-link">부산시 노인복지</router-link>
+      </div>
+      <div class="nav-links">
+        <router-link to="/welfare-centers" class="nav-link">복지센터</router-link>
+        <router-link to="/hospitals" class="nav-link">병원</router-link>
+        <router-link to="/register" class="nav-link">회원가입</router-link>
+      </div>
+    </nav>
+    <main class="main-content">
+      <router-view />
+    </main>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style>
+#app {
+  font-family: 'Noto Sans KR', Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.navbar {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.brand-link {
+  color: #42b983;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.brand-link:hover {
+  color: #3aa876;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
-nav a:first-of-type {
-  border: 0;
+.nav-link {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+.nav-link:hover {
+  color: #42b983;
+  background-color: #f8f9fa;
+}
+
+.nav-link.router-link-active {
+  color: #42b983;
+  background-color: #f8f9fa;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .nav-brand {
+    margin-bottom: 1rem;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
   }
 }
 </style>
