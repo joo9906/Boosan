@@ -1,10 +1,10 @@
-# quiz/openai_utils.py
-from dotenv import load_dotenv
-import openai, os
-from pathlib import Path
+# # quiz/openai_utils.py
+# from dotenv import load_dotenv
+# import openai, os
+# from pathlib import Path
 
-load_dotenv()
-API_KEY = os.getenv("OPENAI_API_KEY")
+# load_dotenv()
+# API_KEY = os.getenv("OPENAI_API_KEY")
 
 # quiz/openai_utils.py
 
