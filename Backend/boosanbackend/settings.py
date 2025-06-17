@@ -137,3 +137,7 @@ AUTH_USER_MODEL = 'account.User'
 # CORS 설정
 CORS_ALLOW_ALL_ORIGINS = True  # 개발 환경에서만 사용
 CORS_ALLOW_CREDENTIALS = True
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media/'
