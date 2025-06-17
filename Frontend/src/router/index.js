@@ -27,7 +27,7 @@ const routes = [
   {
     path: '/quiz',
     name: 'quiz',
-    compoent: () => import('../components/Quiz.vue'),
+    // compoent: () => import('../components/Quiz.vue'),
   },
 ]
 
