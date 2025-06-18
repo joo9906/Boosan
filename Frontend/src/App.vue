@@ -40,6 +40,13 @@ export default {
               회원가입
             </router-link>
             <router-link to="/quiz"> 퀴즈 풀러가기 </router-link>
+            <RouterLink
+              to="/pillupload"
+              class="text-gray-700 hover:text-emerald-600 hover:bg-gray-50 px-4 py-2 rounded-md font-medium transition-colors"
+            >
+              약 등록
+            </RouterLink>
+            <RouterLink to="/my-pills" class="text-blue-500 hover:underline">내 약 보기</RouterLink>
           </div>
         </div>
       </div>

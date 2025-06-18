@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import WelfareCenterList from '../components/WelfareCenterList.vue'
 import HospitalList from '../components/HospitalList.vue'
 import Register from '../components/Register.vue'
+import PillList from '../views/PillListView.vue'
+import PillUpload from '../components/PillUpload.vue'
 
 const routes = [
   {
@@ -25,9 +27,14 @@ const routes = [
     component: Register,
   },
   {
-    path: '/quiz',
-    name: 'quiz',
-    compoent: () => import('../components/Quiz.vue'),
+    path: '/pillupload',
+    name: 'pillupload',
+    component: PillUpload,
+  },
+  {
+    path: '/pills',
+    name: 'pill_list',
+    component: PillList,
   },
 ]
 

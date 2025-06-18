@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./Backend
+    container_name: boosan-backend
+    restart: always
+    environment:
+      - DEBUG=False
+      - DJANGO_SETTINGS_MODULE=boosanbackend.settings
+      - ALLOWED_HOSTS=localhost,127.0.0.1
+    volumes:
+      - static_volume:/app/staticfiles
+    networks:
+      - boosan-network
+
+  frontend:
+    build: ./Frontend
+    container_name: boosan-frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - boosan-network
+
+networks:
+  boosan-network:
+    driver: bridge
+
+volumes:
+  static_volume:
