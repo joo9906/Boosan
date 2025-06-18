@@ -27,6 +27,7 @@ const routes = [
     component: Register,
   },
   {
+<<<<<<< HEAD
     path: '/pillupload',
     name: 'pillupload',
     component: PillUpload,
@@ -35,6 +36,11 @@ const routes = [
     path: '/pills',
     name: 'pill_list',
     component: PillList,
+=======
+    path: '/quiz',
+    name: 'quiz',
+    // compoent: () => import('../components/Quiz.vue'),
+>>>>>>> aa8c7ea480f83e9822e499be69e8662148a289a7
   },
 ]
 
