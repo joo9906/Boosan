@@ -21,7 +21,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { fetchQuiz, submitAnswer } from '@/api/quiz'
+import { fetchQuiz, submitAnswer } from '../api/quiz'
 
 const quiz = ref(null)
 const userAnswer = ref('')
@@ -38,3 +38,9 @@ async function submit() {
   result.value = res.is_correct
 }
 </script>
+
+<style scoped>
+.btn {
+  @apply bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600;
+}
+</style>

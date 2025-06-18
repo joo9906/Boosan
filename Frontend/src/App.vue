@@ -40,6 +40,7 @@ export default {
               회원가입
             </router-link>
             <router-link to="/quiz"> 퀴즈 풀러가기 </router-link>
+            <router-link to="/pill-upload">약 정보 등록</router-link>>
           </div>
         </div>
       </div>
