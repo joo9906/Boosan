@@ -7,4 +7,8 @@ router = DefaultRouter()
 
 urlpatterns = [
     path('', include(router.urls)),
+    # 건강 기록 및 AI 추천 관련 URL
+    path('save-record/', views.save_health_record_and_recommend, name='save_health_record_and_recommend'),
+    path('records/', views.get_health_records, name='get_health_records'),
+    path('options/', views.health_recommendation_options, name='health_recommendation_options'),
 ] 

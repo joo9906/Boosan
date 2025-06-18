@@ -33,6 +33,13 @@ export default {
               병원
             </router-link>
             <router-link
+              to="/health-record"
+              class="text-gray-700 hover:text-emerald-600 hover:bg-gray-50 px-4 py-2 rounded-md font-medium transition-colors"
+              active-class="text-emerald-600 bg-gray-50"
+            >
+              건강기록
+            </router-link>
+            <router-link
               to="/register"
               class="text-gray-700 hover:text-emerald-600 hover:bg-gray-50 px-4 py-2 rounded-md font-medium transition-colors"
               active-class="text-emerald-600 bg-gray-50"

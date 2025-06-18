@@ -4,6 +4,7 @@ import HospitalList from '../components/HospitalList.vue'
 import Register from '../components/Register.vue'
 import Quiz from '../views/quizView.vue'
 import Pillupload from '../components/Pillupload.vue'
+import HealthRecordView from '../views/HealthRecordView.vue'
 
 const routes = [
   {
@@ -27,6 +28,11 @@ const routes = [
     component: Register,
   },
   {
+    path: '/health-record',
+    name: 'health-record',
+    component: HealthRecordView,
+  },
+  {
     path: '/quiz',
     name: 'quiz',
     component: Quiz,
@@ -35,6 +41,7 @@ const routes = [
     path: '/pill-upload',
     name: 'pill-upload',
     component: Pillupload,
+    // compoent: () => import('../components/Quiz.vue'),
   },
 ]
 

@@ -1,0 +1,72 @@
+[
+  {
+    "model": "health_management.Healthrecord",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "record_date": "2025-05-24 03:55:37",
+      "blood_pressure": "136/97",
+      "blood_sugar": 126.1,
+      "weight": 95.5,
+      "notes": "Suscipit consequatur totam rem consequuntur exercitationem quas dolor corporis quod magni.",
+      "health_condition": "당뇨",
+      "facility_visit": null
+    }
+  },
+  {
+    "model": "health_management.Healthrecord",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "record_date": "2025-06-13 07:01:09",
+      "blood_pressure": "94/99",
+      "blood_sugar": 141.1,
+      "weight": 93.3,
+      "notes": "Quo numquam repudiandae culpa necessitatibus ut occaecati delectus.",
+      "health_condition": "비만",
+      "facility_visit": null
+    }
+  },
+  {
+    "model": "health_management.Healthrecord",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "record_date": "2025-05-20 17:06:47",
+      "blood_pressure": "152/97",
+      "blood_sugar": 161.7,
+      "weight": 53.7,
+      "notes": "Necessitatibus eveniet quod ex iusto suscipit unde iure reiciendis consequatur illo dolores enim.",
+      "health_condition": "저혈압",
+      "facility_visit": null
+    }
+  },
+  {
+    "model": "health_management.Healthrecord",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "record_date": "2025-06-08 06:04:11",
+      "blood_pressure": "100/83",
+      "blood_sugar": 148.5,
+      "weight": 53.8,
+      "notes": "Maxime velit quidem dignissimos cumque quia minima recusandae cum dicta.",
+      "health_condition": "저혈압",
+      "facility_visit": null
+    }
+  },
+  {
+    "model": "health_management.Healthrecord",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "record_date": "2025-05-30 04:29:28",
+      "blood_pressure": "134/70",
+      "blood_sugar": 152.2,
+      "weight": 72.4,
+      "notes": "Voluptate placeat quas labore aliquid aliquam dicta aliquam quod odit fuga.",
+      "health_condition": "고혈압",
+      "facility_visit": null
+    }
+  }
+]

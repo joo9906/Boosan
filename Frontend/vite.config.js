@@ -6,6 +6,9 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 5173,
+    proxy: {
+      '^/health/': 'http://localhost:8000',
+    },
   },
   resolve: {
     alias: {
