@@ -1,11 +1,11 @@
 # accounts/serializers.py
 from rest_framework import serializers
 from .models import User
-from django.contrib.auth.password_validation import validate_password
+# from django.contrib.auth.password_validation import validate_password  # 임시로 주석 처리
 
 # 회원가입 전용 (비밀번호 write_only)
 class UserSignupSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True, validators=[validate_password])
+    password = serializers.CharField(write_only=True)  # validators 제거
     password2 = serializers.CharField(write_only=True)
 
     class Meta:
@@ -17,19 +17,25 @@ class UserSignupSerializer(serializers.ModelSerializer):
         ]
         extra_kwargs = {
             'password': {'write_only': True},
-            'password2': {'write_only': True}
+            'password2': {'write_only': True},
+            'guardian_for': {'required': False, 'allow_null': True}
         }
 
     def validate(self, data):
         if data['password'] != data['password2']:
             raise serializers.ValidationError({"password2": "2차 비밀번호가 일치하지 않습니다."})
+        
+        # guardian_for가 빈 문자열이면 None으로 변경
+        if data.get('guardian_for') == '':
+            data['guardian_for'] = None
+            
         return data
 
     def create(self, validated_data):
         validated_data.pop('password2')
 
         user = User.objects.create_user(
-            user_id=validated_data['user_id'],
+            username=validated_data['user_id'],
             name=validated_data['name'],
             password=validated_data['password'],
             birth_date=validated_data['birth_date'],
@@ -37,8 +43,10 @@ class UserSignupSerializer(serializers.ModelSerializer):
             gender=validated_data['gender'],
             phone_number=validated_data['phone_number'],
             is_guardian=validated_data.get('is_guardian', False),
-            guardian_for=validated_data.get('guardian_for', '')
+            guardian_for=validated_data.get('guardian_for', None)
         )
+        user.user_id = validated_data['user_id']
+        user.save()
         return user
 
 # 조회, 수정용
