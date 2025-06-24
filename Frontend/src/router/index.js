@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import WelfareCenterList from '../components/WelfareCenterList.vue'
-import HospitalList from '../components/HospitalList.vue'
+import WelfareCenterList from '../views/WelfareCenterListView.vue'
+import HospitalList from '../views/HospitalListView.vue'
 import Register from '../components/Register.vue'
 import Quiz from '../views/quizView.vue'
 import Pillupload from '../components/Pillupload.vue'

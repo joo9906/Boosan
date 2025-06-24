@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mx-auto h-[844px] w-[390px] overflow-hidden bg-[#ECF6FF] p-5 font-sans">
+  <div class="relative mx-auto h-[844px] w-[390px] overflow-y-auto bg-[#ECF6FF] p-5 font-sans">
     <!-- 뒤로가기 버튼 -->
     <button
       @click="goBack"
@@ -33,39 +33,15 @@
     </div>
 
     <!-- 병원 목록 -->
-    <div
-      class="absolute left-0 right-0 mt-[265px] mx-auto h-[1750px] w-full space-y-5 overflow-y-auto px-5"
-    >
-      <HospitalCard
-        v-for="hospital in paginatedHospitals"
-        :key="hospital.id"
-        :hospital="hospital"
-      />
-    </div>
-    <!-- 페이지네이션 -->
-    <div class="absolute left-0 right-0 bottom-8 flex justify-center space-x-2">
-      <button
-        @click="currentPage--"
-        :disabled="currentPage === 1"
-        class="px-4 py-2 border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
-      >
-        이전
-      </button>
-      <span class="px-4 py-2 text-gray-600"> {{ currentPage }} / {{ totalPages }} </span>
-      <button
-        @click="currentPage++"
-        :disabled="currentPage === totalPages"
-        class="px-4 py-2 border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
-      >
-        다음
-      </button>
+    <div class="mt-[265px] space-y-5">
+      <HospitalCard v-for="hospital in filteredHospitals" :key="hospital.id" :hospital="hospital" />
     </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import HospitalCard from './HospitalCard.vue'
+import HospitalCard from '@/components/HospitalCard.vue'
 
 export default {
   name: 'HospitalList',
@@ -77,19 +53,7 @@ export default {
       hospitals: [],
       searchQuery: '',
       filteredHospitals: [],
-      currentPage: 1,
-      itemsPerPage: 10,
     }
-  },
-  computed: {
-    paginatedHospitals() {
-      const start = (this.currentPage - 1) * this.itemsPerPage
-      const end = start + this.itemsPerPage
-      return this.filteredHospitals.slice(start, end)
-    },
-    totalPages() {
-      return Math.ceil(this.filteredHospitals.length / this.itemsPerPage) || 1
-    },
   },
   methods: {
     async fetchHospitals() {
@@ -113,7 +77,6 @@ export default {
             hospital.type.toLowerCase().includes(query)
         )
       }
-      this.currentPage = 1 // 검색 시 첫 페이지로 이동
     },
     goBack() {
       this.$router.go(-1)
@@ -125,6 +88,8 @@ export default {
 }
 </script>
 
-<style>
-/* Add your styles here */
+<style scoped>
+.font-pretendard {
+  font-family: 'Pretendard', sans-serif;
+}
 </style>

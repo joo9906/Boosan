@@ -8,6 +8,8 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '^/health/': 'http://localhost:8000',
+      '/welfare/': 'http://localhost:8000',
+      '/medical/': 'http://localhost:8000',
     },
   },
   resolve: {

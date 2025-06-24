@@ -1,34 +1,46 @@
 <template>
-  <div class="p-6">
-    <h2 class="text-2xl font-bold text-gray-800 mb-6">복지센터 목록</h2>
-    <div class="mb-6">
+  <div class="relative mx-auto h-[844px] w-[390px] overflow-hidden bg-[#ECF6FF] p-5 font-sans">
+    <!-- 뒤로가기 버튼 -->
+    <button
+      @click="goBack"
+      class="absolute top-[30px] left-[37px] flex h-[47px] w-[111px] items-center justify-center rounded-[20px] bg-[#327BDF] text-center text-[22px] font-bold text-white"
+    >
+      뒤로가기
+    </button>
+
+    <!-- 페이지 제목 -->
+    <h1
+      class="absolute top-[95px] left-[30px] font-pretendard text-[56px] font-bold leading-[67px] text-black"
+    >
+      복지센터 목록
+    </h1>
+
+    <!-- 검색창 -->
+    <div class="absolute top-[180px] left-[30px] h-[58px] w-[324px]">
       <input
         type="text"
         v-model="searchQuery"
-        placeholder="복지센터 검색..."
+        placeholder="복지센터 검색"
         @input="filterCenters"
-        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+        class="h-full w-full rounded-[20px] border border-black bg-white py-2 pl-5 pr-[80px] text-[26px] font-normal text-[#6F6F6F] placeholder-[#6F6F6F] focus:outline-none"
       />
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div
-        v-for="center in paginatedCenters"
-        :key="center.id"
-        class="bg-white p-6 rounded-lg shadow-md"
+      <button
+        @click="filterCenters"
+        class="absolute right-[0px] top-[0px] flex h-full w-[68px] items-center justify-center rounded-[20px] bg-[#D9D9D9]"
       >
-        <h3 class="text-xl font-semibold text-gray-800 mb-4">{{ center.name }}</h3>
-        <p class="text-gray-600 mb-2">
-          <span class="font-medium">주소:</span> {{ center.address }}
-        </p>
-        <p class="text-gray-600 mb-2">
-          <span class="font-medium">전화번호:</span> {{ center.tel }}
-        </p>
-        <p class="text-gray-600"><span class="font-medium">유형:</span> {{ center.type }}</p>
-      </div>
+        <span class="text-center text-[19px] font-bold text-black">검색</span>
+      </button>
+    </div>
+
+    <!-- 복지센터 목록 -->
+    <div
+      class="absolute top-[265px] left-0 right-0 mx-auto h-[1750px] w-full overflow-y-auto px-5 space-y-5"
+    >
+      <WelfareCenterCard v-for="center in paginatedCenters" :key="center.id" :center="center" />
     </div>
 
     <!-- 페이지네이션 -->
-    <div class="mt-8 flex justify-center space-x-2">
+    <div class="absolute left-0 right-0 bottom-4 flex justify-center space-x-2">
       <button
         @click="currentPage--"
         :disabled="currentPage === 1"
@@ -36,7 +48,7 @@
       >
         이전
       </button>
-      <span class="px-4 py-2 text-gray-600"> {{ currentPage }} / {{ totalPages }} </span>
+      <span class="px-4 py-2 text-gray-600">{{ currentPage }} / {{ totalPages }}</span>
       <button
         @click="currentPage++"
         :disabled="currentPage === totalPages"
@@ -49,98 +61,59 @@
 </template>
 
 <script>
-import axios from 'axios'
+import WelfareCenterCard from '@/components/WelfareCenterCard.vue'
 
 export default {
-  name: 'WelfareCenterList',
+  components: { WelfareCenterCard },
   data() {
     return {
       centers: [],
       searchQuery: '',
-      filteredCenters: [],
       currentPage: 1,
-      itemsPerPage: 20,
     }
   },
   computed: {
+    filteredCenters() {
+      if (!this.searchQuery) return this.centers
+      const query = this.searchQuery.toLowerCase()
+      return this.centers.filter(
+        (center) =>
+          center.name.toLowerCase().includes(query) ||
+          center.address.toLowerCase().includes(query) ||
+          (center.type && center.type.toLowerCase().includes(query))
+      )
+    },
     paginatedCenters() {
-      const start = (this.currentPage - 1) * this.itemsPerPage
-      const end = start + this.itemsPerPage
-      return this.filteredCenters.slice(start, end)
+      const start = (this.currentPage - 1) * 10
+      return this.filteredCenters.slice(start, start + 10)
     },
     totalPages() {
-      return Math.ceil(this.filteredCenters.length / this.itemsPerPage)
+      return Math.ceil(this.filteredCenters.length / 10) || 1
     },
   },
   methods: {
-    async fetchCenters() {
-      try {
-        const response = await axios.get('http://localhost:8000/welfare/centers/')
-        this.centers = response.data
-        this.filteredCenters = response.data
-      } catch (error) {
-        console.error('Error fetching welfare centers:', error)
-      }
+    goBack() {
+      this.$router.back()
     },
     filterCenters() {
-      if (!this.searchQuery) {
-        this.filteredCenters = this.centers
-      } else {
-        const query = this.searchQuery.toLowerCase()
-        this.filteredCenters = this.centers.filter(
-          (center) =>
-            center.name.toLowerCase().includes(query) ||
-            center.address.toLowerCase().includes(query) ||
-            center.type.toLowerCase().includes(query)
-        )
-      }
-      this.currentPage = 1 // 검색 시 첫 페이지로 이동
+      this.currentPage = 1
     },
   },
   mounted() {
-    this.fetchCenters()
+    // 실제 API 연동 시 아래 부분을 axios로 교체
+    this.centers = Array.from({ length: 30 }, (_, i) => ({
+      id: i + 1,
+      name: `복지센터 ${i + 1}`,
+      address: `부산시 구군 ${(i % 5) + 1}`,
+      type: `유형${(i % 3) + 1}`,
+      tel: `051-0000-00${i + 1}`,
+    }))
   },
 }
 </script>
 
 <style scoped>
-.welfare-center-list {
-  padding: 20px;
-}
-
-.search-box {
-  margin-bottom: 20px;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.centers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.center-card {
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.center-card h3 {
-  margin-top: 0;
-  color: #2c3e50;
-}
-
-.center-card p {
-  margin: 5px 0;
-  color: #666;
+.font-pretendard {
+  font-family: 'Pretendard', sans-serif;
 }
 </style>
