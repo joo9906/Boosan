@@ -11,4 +11,6 @@ urlpatterns = [
     path('save-record/', views.save_health_record_and_recommend, name='save_health_record_and_recommend'),
     path('records/', views.get_health_records, name='get_health_records'),
     path('options/', views.health_recommendation_options, name='health_recommendation_options'),
+    path('weekly-summary/', views.weekly_health_summary, name='weekly-health-summary'),
+    path('recommendation/<str:date>/', views.get_recommendation, name='get-recommendation'),
 ] 

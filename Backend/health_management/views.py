@@ -8,6 +8,8 @@ from .models import HealthRecord
 from .health_recommend_model import get_health_recommendation_by_values
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
+from django.db.models import Avg
+from datetime import datetime, timedelta
 
 # Create your views here.
 
@@ -124,3 +126,86 @@ def health_recommendation_options(request):
             }
         }
     }, status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def weekly_health_summary(request):
+    """최근 1주일간의 건강 데이터 평균치를 반환"""
+    user = request.user
+    week_ago = datetime.now().date() - timedelta(days=7)
+    
+    # 최근 1주일간의 건강 기록 조회
+    recent_records = HealthRecord.objects.filter(
+        user=user,
+        record_date__date__gte=week_ago
+    )
+    
+    if recent_records.exists():
+        # 혈압과 혈당 데이터 수집
+        blood_pressures = []
+        blood_sugars = []
+        
+        for record in recent_records:
+            # 혈압 데이터 파싱 (예: "120/80" 형태)
+            if record.blood_pressure and '/' in record.blood_pressure:
+                try:
+                    systolic, diastolic = map(int, record.blood_pressure.split('/'))
+                    blood_pressures.append((systolic, diastolic))
+                except ValueError:
+                    pass
+            
+            # 혈당 데이터
+            if record.blood_sugar:
+                blood_sugars.append(record.blood_sugar)
+        
+        # 평균 계산
+        avg_blood_pressure = None
+        if blood_pressures:
+            avg_systolic = sum(bp[0] for bp in blood_pressures) / len(blood_pressures)
+            avg_diastolic = sum(bp[1] for bp in blood_pressures) / len(blood_pressures)
+            avg_blood_pressure = f"{round(avg_systolic)}/{round(avg_diastolic)}"
+        
+        avg_blood_sugar = None
+        if blood_sugars:
+            avg_blood_sugar = round(sum(blood_sugars) / len(blood_sugars))
+        
+        return Response({
+            'avgBloodPressure': avg_blood_pressure,
+            'avgBloodSugar': avg_blood_sugar,
+            'recordCount': recent_records.count()
+        }, status=status.HTTP_200_OK)
+    else:
+        return Response({
+            'avgBloodPressure': None,
+            'avgBloodSugar': None,
+            'recordCount': 0
+        }, status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_recommendation(request, date):
+    """특정 날짜의 추천 정보를 반환"""
+    user = request.user
+    
+    try:
+        # 해당 날짜의 건강 기록 조회
+        health_record = HealthRecord.objects.filter(
+            user=user,
+            record_date__date=date
+        ).first()
+        
+        if health_record:
+            # 임시로 더미 추천 데이터 반환 (실제로는 recommendation 필드가 있어야 함)
+            return Response({
+                '추천_운동': '가벼운 산책 30분, 스트레칭 10분',
+                '추천_식단': '저염식, 채소 위주의 식단, 충분한 수분 섭취'
+            }, status=status.HTTP_200_OK)
+        else:
+            return Response({
+                'message': '해당 날짜의 추천 정보가 없습니다.'
+            }, status=status.HTTP_404_NOT_FOUND)
+            
+    except Exception as e:
+        return Response({
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

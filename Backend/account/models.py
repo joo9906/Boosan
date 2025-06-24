@@ -3,8 +3,7 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     name = models.CharField(max_length=10, default="익명")
-    user_id = models.CharField(max_length=15)
-    password = models.CharField(max_length=15)
+    user_id = models.CharField(max_length=15, unique=True)
     birth_date = models.DateField(null=True, blank=True)
     gender = models.CharField(max_length=1)
     phone_number = models.CharField(max_length=20)
